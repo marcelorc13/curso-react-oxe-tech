@@ -6,20 +6,28 @@ function Card() {
         <div className="card">
             <h3>Preencha os dados para criar o card do colaborador.</h3>
             <div className="inputs">
-                <label htmlFor="Nome">Nome</label>
-                <input type="text" placeholder="Digite seu nome" id="Nome" />
+                <label htmlFor="nome">Nome</label>
+                <input type="text" placeholder="Digite seu nome" id="nome" />
             </div>
             <div className="inputs">
-                <label htmlFor="Nome">Cargo</label>
-                <input type="text" placeholder="Digite seu cargo" id="Nome" />
+                <label htmlFor="cargo">Cargo</label>
+                <input type="text" placeholder="Digite seu cargo" id="cargo" />
             </div>
             <div className="inputs">
-                <label htmlFor="Nome">Imagem</label>
-                <input type="text" placeholder="Informe o endereço da imagem" id="Nome" />
+                <label htmlFor="imagem">Imagem</label>
+                <input type="text" placeholder="Informe o endereço da imagem" id="imagem" />
             </div>
             <div className="inputs">
-                <label htmlFor="Nome">Time</label>
-                <select name="" id=""></select>
+                <label htmlFor="times">Time</label>
+                <select name="" id="times">
+                    <option value="">Programação</option>
+                    <option value="">Front-End</option>
+                    <option value="">Data Science</option>
+                    <option value="">Devops </option>
+                    <option value="">UX e Design</option>
+                    <option value="">Mobile</option>
+                    <option value="">Inovação e Gestão</option>
+                </select>
             </div>
             <button className="btn-criar">Criar card</button>
         </div>
