@@ -1,0 +1,35 @@
+form {
+    color: black;
+    margin-top: 636px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1121px;
+    height: 789px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: #F6F6F6;
+    box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.08);
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 400;
+    align-self: flex-start;
+    margin-left: 96px;
+}
+
+
+.btn-criar {
+    align-self: flex-start;
+    margin-left: 96px;
+    width: 167px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #6278F7;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
