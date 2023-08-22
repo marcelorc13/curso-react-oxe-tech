@@ -1,0 +1,43 @@
+.card {
+    margin-top: 10px;
+    width: 262px;
+    height: 272px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 0px #00000014;
+}
+
+.decoracao-bg {
+    position: absolute;
+    background-color: #57C278;
+    width: 262px;
+    height: 91.9px;
+}
+
+.imagem {
+    margin-top: 40.4px;
+    z-index: 1;
+}
+
+.nome {
+    margin: 0;
+    margin-top: 10px;
+    color: #6278F7;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.cargo {
+    margin: 0;
+    margin-top: 8px;
+    text-align: center;
+    width: 200px;
+    color: #212121;
+    font-size: 16px;
+    font-weight: 400;
+}

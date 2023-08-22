@@ -1,0 +1,34 @@
+.times-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00C86F26;
+    width: 1440px;
+    height: 438px;
+    padding-left: 161px;
+    padding-right: 161px;
+}
+
+h2 {
+    color: #212121;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Prata';
+}
+
+h2::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-color: #57C278;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+  }
+
+.cards-div {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+}

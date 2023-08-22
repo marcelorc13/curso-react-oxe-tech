@@ -3,9 +3,9 @@ import "./banner.css"
 
 function Banner () {
     return (
-        <div className="header">
+        <header className="header">
             <img src="./src/assets/HeaderHeader_total.png"/>
-        </div>
+        </header>
     )
 }
 
