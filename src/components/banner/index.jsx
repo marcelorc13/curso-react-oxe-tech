@@ -1,12 +1,9 @@
-import React from "react";
-import "./banner.css"
-
-function Banner () {
+function Banner() {
     return (
-        <header className="header">
-            <img src="./src/assets/HeaderHeader_total.png"/>
+        <header className="relative">
+            <img className="mx-auto static" src="./src/assets/header.png" />
         </header>
     )
 }
 
-export default Banner;
+export default Banner
