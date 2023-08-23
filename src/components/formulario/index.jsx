@@ -3,11 +3,25 @@ import InputSelect from "../inputSelect"
 
 import { useState } from "react"
 
-function criarCard(e) {
-    e.preventDefault()
-}
-
 function Formulario() {
+    const [valores, setValores] = useState({
+        nome: '',
+        cargo: '',
+        imagem: '',
+        time: '',
+    })
+
+    const onChange = (e) => {
+        const { name, value } = e.target
+        setValores((prev) => {
+            return { ...prev, [name]: value }
+        })
+    }
+
+    function criarCard (e) {
+        e.preventDefault()
+        console.log(valores)
+    }
 
     return (
         <form onSubmit={criarCard} className="bg-color-form flex flex-col items-center mx-36 my-16 rounded-2xl shadow-lg gap-6">
@@ -16,24 +30,33 @@ function Formulario() {
             </h1>
 
             <InputsTexto
+                onChange={onChange}
+                name="nome"
                 id="inputNome"
                 label="Nome"
                 placeholder="Digite seu nome"
             />
 
             <InputsTexto
+                onChange={onChange}
+                name="cargo"
                 id="inputCargo"
                 label="Cargo"
                 placeholder="Digite seu cargo"
             />
 
             <InputsTexto
+                onChange={onChange}
+                name="imagem"
                 id="inputImagem"
                 label="Imagem"
                 placeholder="Informe o endereço da imagem"
             />
 
-            <InputSelect />
+            <InputSelect
+                onChange={onChange}
+                name="time"
+                id="time" />
 
             <input type="submit"
                 value="Criar Card"
