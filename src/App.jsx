@@ -1,15 +1,14 @@
 import { useState } from 'react'
 
 import Banner from './components/banner'
-import Formulario from './components/formulario'
+import Main from './components/main'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
       <Banner />
-      <Formulario />
+      <Main />
     </div>
   )
 }

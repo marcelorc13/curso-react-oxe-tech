@@ -1,15 +1,13 @@
 import React from "react";
 
-import './main.css'
-
 import Formulario from "../formulario";
-import Organizacao from "../organizacao";
+import Time from "../time";
 
 function Main() {
     return (
         <main>
             <Formulario />
-            <Organizacao />
+            <Time />
         </main>
     )
 }

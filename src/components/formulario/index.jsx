@@ -24,8 +24,8 @@ function Formulario() {
     }
 
     return (
-        <form onSubmit={criarCard} className="bg-color-form flex flex-col items-center mx-36 my-16 rounded-2xl shadow-lg gap-6">
-            <h1 className="font-titulo text-3xl my-6 ms-20 self-start">
+        <form onSubmit={criarCard} className="bg-color-form flex flex-col items-center lg:mx-36 my-16 rounded-2xl shadow-lg gap-6">
+            <h1 className="font-titulo text-3xl my-6 mx-20  self-start">
                 Preencha os dados para criar o card do colaborador.
             </h1>
 

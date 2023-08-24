@@ -12,7 +12,9 @@ export default {
     extend: {
       colors : {
         'color-form' : '#F2F2F2',
-        'color-btn' : '#6278F7'
+        'color-btn' : '#6278F7',
+        'color-bg-programacao' : '#D9F7E9',
+        'color-programacao' : '#57C278',
       },
     },
   },

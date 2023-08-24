@@ -10,7 +10,7 @@ function InputsTexto(props) {
                 {props.label}
             </label>
             <input
-                onChange={props.onChange}
+                onChange={props.onChange}   
                 name={props.name}
                 id={props.id}
                 placeholder={props.placeholder}
