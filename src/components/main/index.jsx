@@ -7,7 +7,6 @@ function Main() {
     return (
         <main>
             <Formulario />
-            <Time />
         </main>
     )
 }

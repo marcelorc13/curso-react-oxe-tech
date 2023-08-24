@@ -1,8 +1,6 @@
-import { useState } from "react"
-
 function InputsTexto(props) {
     return (
-        <div className="flex flex-col w-full px-20">
+        <div className="flex flex-col w-full px-10 lg:px-20">
             <label
                 htmlFor={props.id}
                 className="font-corpo font-semibold text-lg"
