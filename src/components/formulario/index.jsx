@@ -3,7 +3,7 @@ import InputSelect from "../inputSelect"
 
 import { useState } from "react"
 
-function Formulario() {
+function Formulario(props) {
     const [valores, setValores] = useState({
         nome: '',
         cargo: '',
@@ -20,7 +20,9 @@ function Formulario() {
 
     function handleAdd (e) {
         e.preventDefault()
-        console.log(valores)
+        props.colaboradorCadastrado(
+            valores
+        )
     }
 
     return (
@@ -56,7 +58,8 @@ function Formulario() {
             <InputSelect
                 onChange={onChange}
                 name="time"
-                id="time" />
+                id="time"
+                placeholder="Selecione seu Time" />
 
             <input type="submit"
                 value="Criar Card"

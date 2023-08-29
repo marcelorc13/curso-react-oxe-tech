@@ -8,7 +8,7 @@ function InputSelect(props) {
                 name={props.name}
                 className="font-corpo ps-4 h-20 drop-shadow-lg"
             >
-                <option value="">Selecione seu Time</option>
+                <option value="" hidden>{props.placeholder}</option>
                 <option value="Programação">Programação</option>
                 <option value="Front-End">Front-End</option>
                 <option value="Data-Science">Data-Science</option>
