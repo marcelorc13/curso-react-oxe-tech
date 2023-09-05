@@ -4,13 +4,14 @@ import Banner from './components/banner'
 import Formulario from './components/formulario'
 import Time from './components/time'
 
+import './assets/btn-add.png'
+
 function App() {
 
   const [colaboradores, setColaboradores] = useState([])
 
   const NovoColaborador = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
-    console.log(colaboradores)
   }
 
   const times = [
@@ -55,10 +56,27 @@ function App() {
     <div className='scroll-smooth'>
       <Banner />
       <div className='mx-auto'>
-        <Formulario colaboradorCadastrado={colaborador => NovoColaborador(colaborador)} />
+        <Formulario
+          times={times.map(time => time.nome)}
+          colaboradorCadastrado={colaborador => NovoColaborador(colaborador)} />
       </div>
       <div>
-        {times.map(time =><Time nome={time.nome} fundo={time.fundo} card={time.card} />)}
+        <div className='mb-12 flex flex-row items-center justify-center relative'>
+          <div>
+            <h1 className='text-center text-4xl font-titulo text-color-btn'>Minha Organização:</h1>
+            <div className="mx-auto mt-5 h-1 w-16 bg-color-btn"></div>
+            <img src="./src/assets/btn-add.png" className='hidden md:block md:w-24 md:absolute md:right-32 md:-top-4' />
+          </div>
+        </div>
+        {times.map(
+          time => <Time
+            key={time.nome}
+            nome={time.nome}
+            fundo={time.fundo}
+            card={time.card}
+
+            colaboradores={colaboradores.filter(
+              colaborador => colaborador.time == time.nome)} />)}
       </div>
     </div>
   )

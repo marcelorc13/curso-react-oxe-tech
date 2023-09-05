@@ -58,6 +58,7 @@ function Formulario(props) {
             <InputSelect
                 onChange={onChange}
                 name="time"
+                times={props.times}
                 id="time"
                 placeholder="Selecione seu Time" />
 
