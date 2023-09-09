@@ -8,9 +8,9 @@ function InputSelect(props) {
                 name={props.name}
                 className="font-corpo ps-4 h-20 drop-shadow-lg"
             >
-                
-                <option hidden>{props.placeholder}</option>
-                {props.times.map(time => <option>{time}</option>)}
+
+                <option id="placeholder" hidden>{props.placeholder}</option>
+                {props.times.map(time => <option id={time}>{time}</option>)}
             </select>
         </div>
     )

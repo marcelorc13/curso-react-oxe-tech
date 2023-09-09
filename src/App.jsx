@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Banner from './components/banner'
 import Formulario from './components/formulario'
 import Time from './components/time'
+import Footer from './components/footer'
 
 import './assets/btn-add.png'
 
@@ -53,7 +54,7 @@ function App() {
   ]
 
   return (
-    <div className='scroll-smooth'>
+    <main className='scroll-smooth'>
       <Banner />
       <div className='mx-auto'>
         <Formulario
@@ -78,7 +79,8 @@ function App() {
             colaboradores={colaboradores.filter(
               colaborador => colaborador.time == time.nome)} />)}
       </div>
-    </div>
+      <Footer />
+    </main>
   )
 }
 

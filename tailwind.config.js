@@ -14,6 +14,9 @@ export default {
         'color-form' : '#F2F2F2',
         'color-btn' : '#6278F7',
       },
+      backgroundImage: {
+        'footer' : "url('/src/assets/bg-footer.png')"
+      },
     },
   },
   plugins: [],
