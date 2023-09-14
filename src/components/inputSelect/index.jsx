@@ -10,7 +10,7 @@ function InputSelect(props) {
             >
 
                 <option id="placeholder" hidden>{props.placeholder}</option>
-                {props.times.map(time => <option id={time}>{time}</option>)}
+                {props.times.map(time => <option key={time}>{time}</option>)}
             </select>
         </div>
     )

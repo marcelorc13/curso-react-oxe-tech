@@ -6,6 +6,9 @@ function Time(props) {
     const cssCard = { backgroundColor: props.card }
 
     return (
+
+        (props.colaboradores.length > 0) ?
+
         <section className="flex flex-col mb-10 items-center"
             style={cssFundo} >
             <h1 className="font-titulo text-3xl mt-6 mb-12">
@@ -23,6 +26,8 @@ function Time(props) {
                     />)}
             </div>
         </section>
+
+        :''
     )
 }
 

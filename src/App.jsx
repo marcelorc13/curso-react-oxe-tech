@@ -1,87 +1,26 @@
-import { useState } from 'react'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./routes/Home";
+import Sobre from "./routes/Sobre";
+import Contato from "./routes/contato";
 
-import Banner from './components/banner'
-import Formulario from './components/formulario'
-import Time from './components/time'
-import Footer from './components/footer'
+export default function App() {
 
-import './assets/btn-add.png'
+    const rotas = createBrowserRouter([
+        {
+            path: '/',
+            element: <Home />
+        },
+        {
+            path: '/sobre',
+            element: <Sobre />
+        },
+        {
+            path: '/contato',
+            element: <Contato />
+        }
+    ])
 
-function App() {
-
-  const [colaboradores, setColaboradores] = useState([])
-
-  const NovoColaborador = (colaborador) => {
-    setColaboradores([...colaboradores, colaborador])
-  }
-
-  const times = [
-    {
-      nome: 'Programação',
-      card: '#57C278',
-      fundo: '#D9F7E9',
-    },
-    {
-      nome: 'Front-End',
-      card: '#82CFFA',
-      fundo: '#E8F8FF',
-    },
-    {
-      nome: 'Data Science',
-      card: '#A6D157',
-      fundo: '#F0F8E2',
-    },
-    {
-      nome: 'Devops',
-      card: '#E06B69',
-      fundo: '#FDE7E8',
-    },
-    {
-      nome: 'UX e Design',
-      card: '#DB6EBF',
-      fundo: '#FAE9F5',
-    },
-    {
-      nome: 'Mobile',
-      card: '#FFBA05',
-      fundo: '#FFF5D9',
-    },
-    {
-      nome: 'Inovação e Gestão',
-      card: '#FF8A29',
-      fundo: '#FFEEDF',
-    },
-  ]
-
-  return (
-    <main className='scroll-smooth'>
-      <Banner />
-      <div className='mx-auto'>
-        <Formulario
-          times={times.map(time => time.nome)}
-          colaboradorCadastrado={colaborador => NovoColaborador(colaborador)} />
-      </div>
-      <div>
-        <div className='mb-12 flex flex-row items-center justify-center relative'>
-          <div>
-            <h1 className='text-center text-4xl font-titulo text-color-btn'>Minha Organização:</h1>
-            <div className="mx-auto mt-5 h-1 w-16 bg-color-btn"></div>
-            <img src="./src/assets/btn-add.png" className='hidden md:block md:w-24 md:absolute md:right-32 md:-top-4' />
-          </div>
-        </div>
-        {times.map(
-          time => <Time
-            key={time.nome}
-            nome={time.nome}
-            fundo={time.fundo}
-            card={time.card}
-
-            colaboradores={colaboradores.filter(
-              colaborador => colaborador.time == time.nome)} />)}
-      </div>
-      <Footer />
-    </main>
-  )
+    return (
+        < RouterProvider router={rotas} />
+    )
 }
-
-export default App
