@@ -6,6 +6,7 @@ import Time from '../../components/time'
 import Footer from '../../components/footer'
 
 import BotaoAdd from '../../assets/btn-add.png'
+import Navbar from '../../components/navbar'
 
 export default function Home() {
 
@@ -55,6 +56,7 @@ export default function Home() {
   
     return (
       <main className='scroll-smooth'>
+        <Navbar />
         <Banner />
         <div className='mx-auto'>
           <Formulario

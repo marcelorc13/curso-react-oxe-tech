@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import Banner from "../../components/banner";
 import Footer from "../../components/footer";
 
 
 export default function Sobre() {
+
+    useEffect(() => {
+       window.scrollTo(0,0)
+    }, [])
+
     return (
         <main>
             <Banner />
