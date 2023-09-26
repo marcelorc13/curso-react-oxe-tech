@@ -62,7 +62,7 @@ export default function Cadastro() {
 
                 <div className='inputs'>
                     <label htmlFor="usuario">Idade:</label>
-                    <input required placeholder='<18' onChange={addIdade} id='idade' type="text" />
+                    <input required placeholder='<18 Anos' onChange={addIdade} id='idade' type="text" />
                 </div>
 
                 <div className='inputs'>
