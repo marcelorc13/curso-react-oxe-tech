@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .inputs {
-    @apply flex flex-col gap-2;
+    @apply flex flex-col gap-1 w-full px-10 lg:px-12 xl:px-20;
 }
 
 .inputs label {
@@ -11,5 +11,5 @@
 }
 
 .inputs input {
-    @apply  rounded-xl text-black ps-2;
+    @apply  rounded-full text-black ps-2 py-1;
 }

@@ -9,10 +9,10 @@ import { AuthContext } from '../../context/auth'
 
 export default function Login() {
 
-    const { logado } = useContext(AuthContext)
+    const { user, login, logout } = useContext(AuthContext)
 
     useEffect(() => {
-        
+
     }, [])
 
     const [usuario, setUsuario] = useState('')
@@ -20,8 +20,15 @@ export default function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(usuario, senha)
+        login(usuario, senha)
+        // if (usuario === user.usuario && senha === user.senha) {
+        //     console.log('Usuário encontrado')
+        // }
+        // else {
+        //     console.log('Usário não encontrado')
+        // }
     }
+
 
     function addUsuario(e) {
         setUsuario(e.target.value)
@@ -33,20 +40,22 @@ export default function Login() {
 
     return (
         <main className='flex items-center justify-center text-white h-screen'>
-            <form onSubmit={handleSubmit} className='flex flex-col gap-8 items-center justify-center bg-color-btn w-2/3 md:1/2 lg:w-1/3 rounded-2xl py-12'>
+            <form onSubmit={handleSubmit} className='flex flex-col gap-8 items-center justify-center bg-color-btn w-5/6 md:w-1/2 lg:w-1/3 rounded-2xl py-12'>
+                <h1 className='text-5xl font-semibold'>LOGIN</h1>
                 <div>
-                    <Link to='/'><img src={Logo} /></Link>
+                    <Link to='/'><img src={Logo} className='h-10 md:h-12 lg:h-16' /></Link>
                 </div>
                 <div className='inputs'>
                     <label htmlFor="usuario">Usuário</label>
-                    <input onChange={addUsuario} id='usuario' type="text" />
+                    <input placeholder='Usuário / Email' onChange={addUsuario} id='usuario' type="text" />
                 </div>
 
                 <div className='inputs'>
                     <label htmlFor="senha">Senha</label>
-                    <input onChange={addSenha} id='senha' type="password" />
+                    <input placeholder='Senha' onChange={addSenha} id='senha' type="password" />
                 </div>
                 <button className=' text-white font-bold border border-white rounded-full px-2 py-0.5' type='submit'>Enviar</button>
+                <Link to={'/cadastro'} className='underline'>Cadastre-se</Link>
             </form>
         </main>
     )

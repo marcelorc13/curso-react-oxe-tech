@@ -4,7 +4,7 @@ import Logo from '../../assets/logo.png'
 
 export default function Navbar() {
     return (
-        <nav className="flex flex-row justify-between items-center top-0 right-0 left-0 bg-color-btn border-b border-gray-400 px-12 text-white text-xl font-semibold">
+        <nav className="flex flex-row justify-between items-center top-0 right-0 left-0 bg-color-btn border-b-2 border-white px-12 text-white text-xl font-semibold">
             <div className="py-4">
                 <Link><img src={Logo} /></Link>
             </div>
