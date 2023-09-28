@@ -21,12 +21,6 @@ export default function Login() {
     function handleSubmit(e) {
         e.preventDefault()
         login(usuario, senha)
-        // if (usuario === user.usuario && senha === user.senha) {
-        //     console.log('Usuário encontrado')
-        // }
-        // else {
-        //     console.log('Usário não encontrado')
-        // }
     }
 
 
@@ -46,8 +40,8 @@ export default function Login() {
                     <Link to='/'><img src={Logo} className='h-10 md:h-12 lg:h-16' /></Link>
                 </div>
                 <div className='inputs'>
-                    <label htmlFor="usuario">Usuário</label>
-                    <input placeholder='Usuário / Email' onChange={addUsuario} id='usuario' type="text" />
+                    <label htmlFor="usuario">Email:</label>
+                    <input placeholder='Email' onChange={addUsuario} id='usuario' type="text" />
                 </div>
 
                 <div className='inputs'>

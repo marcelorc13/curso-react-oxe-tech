@@ -30,16 +30,18 @@ export default function Sobre() {
         <main>
             <Navbar />
             <Banner />
-            <div className="flex flex-col items-center justify-center py-40">
+            <div className="flex flex-col gap-6 items-center justify-center py-40">
                 <h1 className="text-4xl font-bold">Sobre</h1>
-                {data.map((item) => {
-                    return (
-                        <div className="flex flex-col pb-4 items-center" key={item.cell} >
-                            <p>{item.gender}</p>
-                            <p>{item.name.first}</p>
-                        </div>
-                    )
-                })}
+                <div className="flex flex-col gap-6">
+                    {data.map((item) => {
+                        return (
+                            <div className="flex flex-col items-center" key={item.cell} >
+                                <p className="text-lg"><span className="font-bold">Gênero:</span> {item.gender}</p>
+                                <p className="text-lg"><span className="font-bold">Nome:</span>{item.name.first}</p>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
             <Footer />
         </main>

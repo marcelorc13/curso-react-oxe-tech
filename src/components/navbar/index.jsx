@@ -23,9 +23,10 @@ export default function Navbar() {
                     <Link to='/contato'>Contato</Link>
                 </li>
             </ul>
-            <div id='login'>
-                <Link to='/login'>Login</Link>
-            </div>
+            <ul id='login' className='flex items-center gap-6'>
+                <li><Link to='/login'>Login</Link></li>
+                <li><Link to='/cadastro'>Cadastro</Link></li>
+            </ul>
         </nav>
     )
 }

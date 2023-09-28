@@ -15,9 +15,9 @@
 }
 
 .ativo {
-    @apply scale-110;
+    @apply scale-125;
 }
 
-#login:hover {
+#login li:hover {
     @apply scale-125 transition duration-300
 }
