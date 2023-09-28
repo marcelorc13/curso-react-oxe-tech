@@ -4,8 +4,7 @@ export const AuthContext = createContext({})
 
 export default function AuthProvider({ children }) {
 
-
-    const [user, setUser] = useState()
+    const [user, setUser] = useState('Envie novamente')
 
     function login(usuario, senha) {
         setUser({

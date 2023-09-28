@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#lista-nav li {
+    @apply relative
+}
+
+#lista-nav li::after {
+    @apply content-[''] absolute left-0 -bottom-0.5 w-0 h-0.5 bg-white rounded-full duration-300;
+}
+
+#lista-nav li:hover::after {
+    @apply w-full;
+}
+
+.ativo {
+    @apply scale-110;
+}
+
+#login:hover {
+    @apply scale-125 transition duration-300
+}

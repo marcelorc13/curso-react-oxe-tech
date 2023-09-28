@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Banner from '../../components/banner'
 import Formulario from '../../components/formulario'
@@ -9,6 +9,12 @@ import BotaoAdd from '../../assets/btn-add.png'
 import Navbar from '../../components/navbar'
 
 export default function Home() {
+
+  useEffect(() => {
+    const home = document.querySelector('#home')
+    home.classList.add('ativo')
+    }, [])
+
 
     const [colaboradores, setColaboradores] = useState([])
   

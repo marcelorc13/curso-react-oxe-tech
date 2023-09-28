@@ -22,6 +22,8 @@ export default function Sobre() {
 
     useEffect(() => {
         HandleFetch()
+        const sobre = document.querySelector('#sobre')
+        sobre.classList.add('ativo')
     }, [])
 
     return (
