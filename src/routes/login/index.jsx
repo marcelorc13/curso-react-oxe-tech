@@ -9,7 +9,7 @@ import { AuthContext } from '../../context/auth'
 
 export default function Login() {
 
-    const { user, login, logout } = useContext(AuthContext)
+    const { user, login, logout, cadastrar } = useContext(AuthContext)
 
     useEffect(() => {
 

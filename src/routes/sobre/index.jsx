@@ -5,6 +5,7 @@ import Banner from "../../components/banner";
 import Footer from "../../components/footer";
 
 import axios from "axios";
+import Cards from "../../components/cards";
 
 export default function Sobre() {
 
@@ -32,13 +33,18 @@ export default function Sobre() {
             <Banner />
             <div className="flex flex-col gap-6 items-center justify-center py-40">
                 <h1 className="text-4xl font-bold">Sobre</h1>
-                <div className="flex flex-col gap-6">
+                <h2 className="text-2xl font-semibold">API de Pessoas Aleatórias:</h2>
+                <div className="flex flex-row justify-center flex-wrap gap-6 px-16">
                     {data.map((item) => {
                         return (
-                            <div className="flex flex-col items-center" key={item.cell} >
-                                <p className="text-lg"><span className="font-bold">Gênero:</span> {item.gender}</p>
-                                <p className="text-lg"><span className="font-bold">Nome:</span>{item.name.first}</p>
-                            </div>
+                            <Cards
+                            key={item.cell}
+                            foto={item.picture.medium}
+                            nome={item.name.first}
+                            email={item.email}
+                            idade={item.dob.age}
+                            genero={item.gender}
+                             />
                         )
                     })}
                 </div>
